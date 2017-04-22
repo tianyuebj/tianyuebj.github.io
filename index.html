@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -90,12 +90,15 @@
 
 
 
+<meta name="description" content="不如笑归红尘去">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TianAlchemy">
 <meta property="og:url" content="http://www.tianalchemy.com/index.html">
 <meta property="og:site_name" content="TianAlchemy">
+<meta property="og:description" content="不如笑归红尘去">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TianAlchemy">
+<meta name="twitter:description" content="不如笑归红尘去">
 
 
 
@@ -103,7 +106,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
@@ -300,6 +303,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -331,253 +356,30 @@
 <p>需要安装hexo-deployer-git扩展：</p>
 <p>npm install hexo-deployer-git –save<br>　　<br>(2)修改_config.yml文件</p>
 <p>添加类似如下的部署配置：</p>
-<p>deploy:<br>  type: git<br>  repo: git@github.com:bingyue/bingyue.github.io.git<br>  branch: master<br>　　<br>执行</p>
-<p>hexo clean<br>hexo gegerate<br>hexo deploy</p>
-<p>二、Hexo博客编写<br>hexo n 新建博客<br>hexo g 生成博客<br>hexo d 部署博客<br>hexo s 开启服务</p>
+<p>deploy:<br>  type: git<br>  repo: git@github.com:bingyue/bingyue.github.io.git<br>  branch: master<br>　　<br>执行<br>hexo clean #清除 Hexo 的缓存<br>hexo generate # 生成静态页面，可以简化为hexo g<br>hexo deploy # 部署到Github，可以简化为hexo d</p>
+<p>二、Hexo博客编写<br>1）简单命令<br>hexo n 新建博客<br>hexo g 生成博客（静态页面）<br>hexo d 部署博客 (可与hexo g合并为 hexo d -g)<br>hexo s 开启服务 (hexo server的简写，本地启动)<br>PS:配置文件的冒号后必须有一个空格<br>重要：更多指南可见<a href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" target="_blank" rel="external">http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</a></p>
+<p>2）编写文章<br>title: HelloWorld！ # 文章页面上的显示名称，可以任意修改，不会出现在URL中<br>date: 2015-11-09 15:56:26 # 文章生成时间，一般不改<br>categories:   # 文章分类目录，参数可省略</p>
+<pre><code>- 随笔
+- 瞬间
+</code></pre><p>tags:   # 文章标签，参数可省略</p>
+<pre><code>- hexo
+- blog # 个数不限，单个可直接跟在tags后面
+</code></pre><hr>
+<p>这里开始使用markdown格式输入正文。</p>
+<p>3）categories语法（tag也可使用类似语法）</p>
+<h1 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h1><p>categories:</p>
+<ul>
+<li>一级分类</li>
+<li>二级分类</li>
+<li>etc…</li>
+</ul>
+<h1 id="第二种："><a href="#第二种：" class="headerlink" title="第二种："></a>第二种：</h1><p>categories: [一级分类, 二级分类]</p>
 <p>三、更换主题<br>1）将想要的主题（如X）先克隆到自己电脑上： </p>
 <ul>
 <li>cd your-hexo-site </li>
-<li>Git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next（X的git地址）。<br>2）安装主题<br>将站点配置文件_config.yml中的主题配置更换成theme：X即可<br>3）更多主题可见：<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">https://www.zhihu.com/question/24422335</a></li>
+<li>Git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next（X的git地址）。<br>2）安装主题<br>将站点配置文件_config.yml中的主题配置更换成theme：X即可<br>3）更多主题可见：<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">https://www.zhihu.com/question/24422335</a><br>4）NexT官网：<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a> 上有详细的操作方法</li>
 </ul>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.tianalchemy.com/2017/04/22/lll/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="TianAlchemy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TianAlchemy">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/22/lll/" itemprop="url">
-                  lll
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-22T13:42:43+08:00">
-                2017-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.tianalchemy.com/2017/04/22/延迟测试/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="TianAlchemy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TianAlchemy">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/22/延迟测试/" itemprop="url">
-                  延迟测试
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-22T09:49:53+08:00">
-                2017-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
           
         
       
@@ -896,7 +698,7 @@
                alt="TianAlchemy" />
           <p class="site-author-name" itemprop="name">TianAlchemy</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">不如笑归红尘去</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -904,12 +706,21 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
           
 
           
@@ -965,7 +776,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
