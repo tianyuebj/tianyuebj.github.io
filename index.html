@@ -371,7 +371,7 @@
       
         
           
-            <p>因为Hexo博客每次更新push到GitHub上都要输入Git账号、密码，很麻烦。想起来之前看过廖雪峰老师的教程Git——远程仓库一节里有提到SSH协议，现在刚好能起作用，整理要点如下。<br>1）SSH：<br>使用SSH协议，可以连接和验证远程服务器和服务。使用SSH密钥，您可以连接到GitHub，而无需在每次访问时提供您的用户名或密码。<br>)2）首先确认自己的系统中是否已经拥有密钥。在默认情况下SSH的密钥存储在其~/.ssh目录下。可以使用以下命令进入目录并列出内容：</p>
+            <p>因为Hexo博客每次更新push到GitHub上都要输入Git账号、密码，很麻烦。想起来之前看过廖雪峰老师的教程Git——远程仓库一节里有提到SSH协议，现在刚好能起作用，整理要点如下。<br>1）SSH：<br>使用SSH协议，可以连接和验证远程服务器和服务。使用SSH密钥，您可以连接到GitHub，而无需在每次访问时提供您的用户名或密码。<br>2）首先确认自己的系统中是否已经拥有密钥。在默认情况下SSH的密钥存储在其~/.ssh目录下。可以使用以下命令进入目录并列出内容：</p>
 <p>$ cd ~/.ssh<br>$ ls<br>id_rsa id_rsa.pub known_hosts</p>
 <p>其中id_rsa和id_rsa.pub就是存储密钥的文件，带有.pub后缀的是公钥，另外一个则是私钥。<br>如果存在这些文件，则可以直接用$ cat id_rsa.pub来读取密钥内容。（要点）<br>如果不存在这些文件，则需使用如下命令创建（邮箱为注册Git时的邮箱）<br>ssh-keygen -t rsa -C “youremail@example.com”</p>
 <p>参考材料：<br>1.<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374385852170d9c7adf13c30429b9660d0eb689dd43a000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374385852170d9c7adf13c30429b9660d0eb689dd43a000</a><br>2.<a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank" rel="external">https://help.github.com/articles/connecting-to-github-with-ssh/</a><br>3.<a href="http://blog.csdn.net/u011836061/article/details/46559841" target="_blank" rel="external">http://blog.csdn.net/u011836061/article/details/46559841</a><br>4.<a href="http://www.jianshu.com/p/697fe0815689" target="_blank" rel="external">http://www.jianshu.com/p/697fe0815689</a></p>
@@ -643,6 +643,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习-Flask/" itemprop="url" rel="index">
+                    <span itemprop="name">-学习 -Flask</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -669,7 +691,9 @@
       
         
           
-            <p>开展Flasks数据库学习<br>5.6 定义模型<br>模型这个术语表示程序使用的持久化实体。在ORM中，模型一般是一个Python类，类中的属性对应数据库中的列。<br>ORM:抽象层，也称对象关系映射（ORM）或对象文档映射（ODM），在用户不知觉的情况下把高层的面向对象操作转换成低层的数据库指令。</p>
+            <p>开展Flask学习中不明白的地方的记录。<br>5.6 定义模型<br>模型这个术语表示程序使用的持久化实体。在ORM中，模型一般是一个Python类，类中的属性对应数据库中的列。<br>ORM:抽象层，也称对象关系映射（ORM）或对象文档映射（ODM），在用户不知觉的情况下把高层的面向对象操作转换成低层的数据库指令。</p>
+<p>5.11<br>源码控制工具可以根据源码文件的变化，类似地，数据库迁移框架能跟踪数据库模式的变化，然后增量式的把变化应用到数据库中。</p>
+<p>第6章 电子邮件<br>Flask-Mail连接到简单邮件传输协议（SMTP）服务器，并把邮件交给这个服务器发送。如果不进行配置，Flask-Mail会连接localhost上的端口25，无需验证即可发送电子邮件。</p>
 
           
         
@@ -888,7 +912,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
