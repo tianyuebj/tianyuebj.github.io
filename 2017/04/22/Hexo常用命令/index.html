@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://www.tianalchemy.com/2017/04/22/Hexo常用命令/index.html">
 <meta property="og:site_name" content="TianAlchemy">
 <meta property="og:description" content="一、关联Hexo与Github (1)安装扩展 需要安装hexo-deployer-git扩展： npm install hexo-deployer-git –save　　(2)修改_config.yml文件 添加类似如下的部署配置： deploy:  type: git  repo: git@github.com:bingyue/bingyue.github.io.git  branch: ma">
-<meta property="og:updated_time" content="2017-04-22T06:57:59.568Z">
+<meta property="og:updated_time" content="2017-04-22T07:04:39.816Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo常用命令">
 <meta name="twitter:description" content="一、关联Hexo与Github (1)安装扩展 需要安装hexo-deployer-git扩展： npm install hexo-deployer-git –save　　(2)修改_config.yml文件 添加类似如下的部署配置： deploy:  type: git  repo: git@github.com:bingyue/bingyue.github.io.git  branch: ma">
@@ -108,7 +108,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
@@ -312,8 +312,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo学习/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo学习</span>
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
                   </a>
                 </span>
 
@@ -352,7 +363,7 @@
 <p>npm install hexo-deployer-git –save<br>　　<br>(2)修改_config.yml文件</p>
 <p>添加类似如下的部署配置：</p>
 <p>deploy:<br>  type: git<br>  repo: git@github.com:bingyue/bingyue.github.io.git<br>  branch: master<br>　　<br>执行<br>hexo clean #清除 Hexo 的缓存<br>hexo generate # 生成静态页面，可以简化为hexo g<br>hexo deploy # 部署到Github，可以简化为hexo d</p>
-<p>二、Hexo博客编写<br>1）简单命令<br>hexo n 新建博客<br>hexo g 生成博客（静态页面）<br>hexo d 部署博客 (可与hexo g合并为 hexo d -g)<br>hexo s 开启服务 (hexo server的简写，本地启动)<br>PS:配置文件的冒号后必须有一个空格<br>重要：更多指南可见<a href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" target="_blank" rel="external">http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</a></p>
+<p>二、Hexo博客编写<br>1）简单命令<br>hexo n 新建博客<br>hexo g 生成博客（静态页面）<br>hexo d 部署博客 (可与hexo g合并为 hexo d -g)<br>hexo s 开启服务 (hexo server的简写，本地启动)<br>PS:配置文件的冒号后必须有一个空格<br>重要：更多指南可见<br><a href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" target="_blank" rel="external">http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</a></p>
 <p>2）编写文章<br>title: HelloWorld！ # 文章页面上的显示名称，可以任意修改，不会出现在URL中<br>date: 2015-11-09 15:56:26 # 文章生成时间，一般不改<br>categories:   # 文章分类目录，参数可省略</p>
 <pre><code>- 随笔
 - 瞬间
@@ -361,19 +372,14 @@
 - blog # 个数不限，单个可直接跟在tags后面
 </code></pre><hr>
 <p>这里开始使用markdown格式输入正文。</p>
-<p>3）categories语法（tag也可使用类似语法）</p>
-<h1 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h1><p>categories:</p>
+<p>3）categories语法（tag也可使用类似语法）<br>第一种：<br>categories:</p>
 <ul>
 <li>一级分类</li>
 <li>二级分类</li>
 <li>etc…</li>
 </ul>
-<h1 id="第二种："><a href="#第二种：" class="headerlink" title="第二种："></a>第二种：</h1><p>categories: [一级分类, 二级分类]</p>
-<p>三、更换主题<br>1）将想要的主题（如X）先克隆到自己电脑上： </p>
-<ul>
-<li>cd your-hexo-site </li>
-<li>Git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next（X的git地址）。<br>2）安装主题<br>将站点配置文件_config.yml中的主题配置更换成theme：X即可<br>3）更多主题可见：<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">https://www.zhihu.com/question/24422335</a><br>4）NexT官网：<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a> 上有详细的操作方法</li>
-</ul>
+<p>第二种：<br>categories: [一级分类, 二级分类]</p>
+<p>三、更换主题<br>1）将想要的主题（如X）先克隆到自己电脑上：<br>cd your-hexo-site<br>Git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next（X的git地址）。<br>2）安装主题<br>将站点配置文件_config.yml中的主题配置更换成theme：X即可<br>3）更多主题可见：<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">https://www.zhihu.com/question/24422335</a><br>4）NexT官网：<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a> 上有详细的操作方法</p>
 
       
     </div>
@@ -465,17 +471,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -501,7 +498,7 @@
             
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -528,22 +525,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一种"><span class="nav-number">1.</span> <span class="nav-text">第一种</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二种："><span class="nav-number">2.</span> <span class="nav-text">第二种：</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -576,7 +557,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -655,6 +636,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
