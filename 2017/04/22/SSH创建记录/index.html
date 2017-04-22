@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="一、关联Hexo与Github (1)安装扩展 需要安装hexo-deployer-git扩展： npm install hexo-deployer-git –save　　(2)修改_config.yml文件 添加类似如下的部署配置： deploy:  type: git  repo: git@github.com:bingyue/bingyue.github.io.git  branch: ma">
+<meta name="description" content="因为Hexo博客每次更新push到GitHub上都要输入Git账号、密码，很麻烦。想起来之前看过廖雪峰老师的教程Git——远程仓库一节里有提到SSH协议，现在刚好能起作用，整理要点如下。1）SSH：使用SSH协议，可以连接和验证远程服务器和服务。使用SSH密钥，您可以连接到GitHub，而无需在每次访问时提供您的用户名或密码。)2）首先确认自己的系统中是否已经拥有密钥。在默认情况下SSH的密钥存储">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo常用命令">
-<meta property="og:url" content="http://www.tianalchemy.com/2017/04/22/Hexo常用命令/index.html">
+<meta property="og:title" content="SSH创建记录">
+<meta property="og:url" content="http://www.tianalchemy.com/2017/04/22/SSH创建记录/index.html">
 <meta property="og:site_name" content="TianAlchemy">
-<meta property="og:description" content="一、关联Hexo与Github (1)安装扩展 需要安装hexo-deployer-git扩展： npm install hexo-deployer-git –save　　(2)修改_config.yml文件 添加类似如下的部署配置： deploy:  type: git  repo: git@github.com:bingyue/bingyue.github.io.git  branch: ma">
-<meta property="og:updated_time" content="2017-04-22T07:08:05.077Z">
+<meta property="og:description" content="因为Hexo博客每次更新push到GitHub上都要输入Git账号、密码，很麻烦。想起来之前看过廖雪峰老师的教程Git——远程仓库一节里有提到SSH协议，现在刚好能起作用，整理要点如下。1）SSH：使用SSH协议，可以连接和验证远程服务器和服务。使用SSH密钥，您可以连接到GitHub，而无需在每次访问时提供您的用户名或密码。)2）首先确认自己的系统中是否已经拥有密钥。在默认情况下SSH的密钥存储">
+<meta property="og:updated_time" content="2017-04-22T08:49:14.096Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo常用命令">
-<meta name="twitter:description" content="一、关联Hexo与Github (1)安装扩展 需要安装hexo-deployer-git扩展： npm install hexo-deployer-git –save　　(2)修改_config.yml文件 添加类似如下的部署配置： deploy:  type: git  repo: git@github.com:bingyue/bingyue.github.io.git  branch: ma">
+<meta name="twitter:title" content="SSH创建记录">
+<meta name="twitter:description" content="因为Hexo博客每次更新push到GitHub上都要输入Git账号、密码，很麻烦。想起来之前看过廖雪峰老师的教程Git——远程仓库一节里有提到SSH协议，现在刚好能起作用，整理要点如下。1）SSH：使用SSH协议，可以连接和验证远程服务器和服务。使用SSH密钥，您可以连接到GitHub，而无需在每次访问时提供您的用户名或密码。)2）首先确认自己的系统中是否已经拥有密钥。在默认情况下SSH的密钥存储">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://www.tianalchemy.com/2017/04/22/Hexo常用命令/"/>
+  <link rel="canonical" href="http://www.tianalchemy.com/2017/04/22/SSH创建记录/"/>
 
 
 
 
 
-  <title> Hexo常用命令 | TianAlchemy </title>
+  <title> SSH创建记录 | TianAlchemy </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +273,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.tianalchemy.com/2017/04/22/Hexo常用命令/">
+    <link itemprop="mainEntityOfPage" href="http://www.tianalchemy.com/2017/04/22/SSH创建记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TianAlchemy">
@@ -294,7 +294,7 @@
             
             
               
-                Hexo常用命令
+                SSH创建记录
               
             
           </h1>
@@ -309,7 +309,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-22T14:15:56+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-22T16:37:45+08:00">
                 2017-04-22
               </time>
             
@@ -333,18 +333,7 @@
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
+                    <span itemprop="name">-学习</span>
                   </a>
                 </span>
 
@@ -377,29 +366,10 @@
       
 
       
-        <p>一、关联Hexo与Github</p>
-<p>(1)安装扩展</p>
-<p>需要安装hexo-deployer-git扩展：</p>
-<p>npm install hexo-deployer-git –save<br>　　<br>(2)修改_config.yml文件</p>
-<p>添加类似如下的部署配置：</p>
-<p>deploy:<br>  type: git<br>  repo: git@github.com:bingyue/bingyue.github.io.git<br>  branch: master<br>　　<br>执行<br>hexo clean #清除 Hexo 的缓存<br>hexo generate # 生成静态页面，可以简化为hexo g<br>hexo deploy # 部署到Github，可以简化为hexo d</p>
-<p>二、Hexo博客编写<br>1）简单命令<br>hexo n 新建博客<br>hexo g 生成博客（静态页面）<br>hexo d 部署博客 (可与hexo g合并为 hexo d -g)<br>hexo s 开启服务 (hexo server的简写，本地启动)<br>PS:配置文件的冒号后必须有一个空格<br>重要：更多指南可见<br><a href="http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" target="_blank" rel="external">http://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</a></p>
-<p>2）编写文章<br>title: HelloWorld！ # 文章页面上的显示名称，可以任意修改，不会出现在URL中<br>date: 2015-11-09 15:56:26 # 文章生成时间，一般不改<br>categories:   # 文章分类目录，参数可省略</p>
-<pre><code>- 随笔
-- 瞬间
-</code></pre><p>tags:   # 文章标签，参数可省略</p>
-<pre><code>- hexo
-- blog # 个数不限，单个可直接跟在tags后面
-</code></pre><hr>
-<p>这里开始使用markdown格式输入正文。</p>
-<p>3）categories语法（tag也可使用类似语法）<br>第一种：<br>categories:</p>
-<ul>
-<li>一级分类</li>
-<li>二级分类</li>
-<li>etc…</li>
-</ul>
-<p>第二种：<br>categories: [一级分类, 二级分类]</p>
-<p>三、更换主题<br>1）将想要的主题（如X）先克隆到自己电脑上：<br>cd your-hexo-site<br>Git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next（X的git地址）。<br>2）安装主题<br>将站点配置文件_config.yml中的主题配置更换成theme：X即可<br>3）更多主题可见：<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">https://www.zhihu.com/question/24422335</a><br>4）NexT官网：<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a> 上有详细的操作方法</p>
+        <p>因为Hexo博客每次更新push到GitHub上都要输入Git账号、密码，很麻烦。想起来之前看过廖雪峰老师的教程Git——远程仓库一节里有提到SSH协议，现在刚好能起作用，整理要点如下。<br>1）SSH：<br>使用SSH协议，可以连接和验证远程服务器和服务。使用SSH密钥，您可以连接到GitHub，而无需在每次访问时提供您的用户名或密码。<br>)2）首先确认自己的系统中是否已经拥有密钥。在默认情况下SSH的密钥存储在其~/.ssh目录下。可以使用以下命令进入目录并列出内容：</p>
+<p>$ cd ~/.ssh<br>$ ls<br>id_rsa id_rsa.pub known_hosts</p>
+<p>其中id_rsa和id_rsa.pub就是存储密钥的文件，带有.pub后缀的是公钥，另外一个则是私钥。<br>如果存在这些文件，则可以直接用$ cat id_rsa.pub来读取密钥内容。（要点）<br>如果不存在这些文件，则需使用如下命令创建（邮箱为注册Git时的邮箱）<br>ssh-keygen -t rsa -C “youremail@example.com”</p>
+<p>参考材料：<br>1.<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374385852170d9c7adf13c30429b9660d0eb689dd43a000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374385852170d9c7adf13c30429b9660d0eb689dd43a000</a><br>2.<a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank" rel="external">https://help.github.com/articles/connecting-to-github-with-ssh/</a><br>3.<a href="http://blog.csdn.net/u011836061/article/details/46559841" target="_blank" rel="external">http://blog.csdn.net/u011836061/article/details/46559841</a><br>4.<a href="http://www.jianshu.com/p/697fe0815689" target="_blank" rel="external">http://www.jianshu.com/p/697fe0815689</a></p>
 
       
     </div>
@@ -436,18 +406,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/22/SSH创建记录/" rel="next" title="SSH创建记录">
-                <i class="fa fa-chevron-left"></i> SSH创建记录
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/22/Flask-学习记录/" rel="prev" title="Flask 学习记录">
-                Flask 学习记录 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/22/Hexo常用命令/" rel="prev" title="Hexo常用命令">
+                Hexo常用命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
